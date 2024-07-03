@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Goals for the Next 2 Years</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f9f9f9; /* light gray background */
+        }
+        header {
+            background-color: #4CAF50; /* green background */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+        }
+        main {
+            max-width: 800px; /* max width to center the content */
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff; /* white background */
+            border: 1px solid #ddd; /* light gray border */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+        }
+        .profile {
+            text-align: center;
+            margin-bottom: 20px; /* space between sections */
+        }
+        .profile img {
+            border-radius: 50%;
+            border: 2px solid #4CAF50; /* green border */
+            transition: border-color 0.2s ease; /* transition effect */
+        }
+        .profile img:hover {
+            border-color: #3e8e41; /* darker green border on hover */
+        }
+        .profile h2 {
+            margin-top: 0; /* removed default margin */
+            color: #2196F3; /* blue color */
+            cursor: pointer; /* pointer cursor on hover */
+        }
+        .profile h2:hover {
+            color: #1976D2; /* darker blue color on hover */
+        }
+        .profile h2:active {
+            color: #1565C0; /* even darker blue color on click */
+        }
+        .goals {
+            margin: 20px 0;
+        }
+        .goals h2 {
+            margin-top: 0; /* removed default margin */
+            color: #FFC107; /* orange color */
+        }
+        .links a {
+            display: block;
+            margin: 10px 0;
+            color: #4CAF50; /* green color */
+            text-decoration: none;
+            transition: color 0.2s ease; /* transition effect */
+        }
+        .links a:hover {
+            color: #3e8e41; /* darker green color on hover */
+        }
+        footer {
+            background-color: #f1f1f1; /* light gray background */
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+            border-top: 1px solid #ddd; /* light gray border */
+        }
+        footer p {
+            margin-bottom: 0; /* removed default margin */
+            color: #9C27B0; /* purple color */
+        }
+        
+        /* Additional colors */
+        .color1 {
+            background-color: #8BC34A; /* yellow-green color */
+        }
+        .color2 {
+            background-color: #E91E63; /* pink color */
+        }
+        .color3 {
+            background-color: #673AB7; /* deep purple color */
+        }
+        .color4 {
+            background-color: #009688; /* teal color */
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 10px;
+            }
+            .profile img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Tech Goals for the Next 2 Years</h1>
+    </header>
+    <main>
+        <section class="profile">
+            <h2 data-testid="slackDisplayName" onclick="alert('You clicked on the Slack display name!')">Anas Obiahu</h2>
+            <img src="images/anas.jpg" alt="Slack Profile Picture" data-testid="slackProfilePicture" style="width: 150px; height: 150px;">
+            <p data-testid="slackEmail">nans4more98@gmail.com</p>
+        </section>
+        <section class="goals">
+            <h2>My Goals</h2>
+            <p>I'm a full stack developer in training. 
+                I want to work globally and build cool projects. 
+                To achieve this, I'll master the basics, stay updated on industry trends, and gain experience. 
+                I'll also develop soft skills, build a portfolio, and pursue certifications. 
+                My goal is to become a skilled full stack developer and make a name for myself in the tech world. 
+                I'll keep learning and growing to get there!</p>
+        </section>
+        <section class="current-time">
+            <p>Current Time (UTC): <span data-testid="currentTimeUTC" id="currentTimeUTC"></span></p>
+            <p>Current Day: <span data-testid="currentDay" id="currentDay"></span></p>
+        </section>
+
+
+
+        
+
+
+
+
+        <section class="links">
+            <h2>Useful Links</h2>
+            <a href="https://hng.tech/learn" data-testid="hngLink">HNG Learn</a>
+            <a href="https://keyword.dog" data-testid="keywordLink">Keyword Dog</a>
+            <a href="https://scrapeanyweb.site" data-testid="scrapeanywebLink">Scrape Any Web</a>
+        </section>
+
+
+
+
+        
+
+    </main>
+    <footer>
+        <p>&copy; 2024 Obiahu Anas. All rights reserved.</p>
+    </footer>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const utcTime = now.toUTCString().slice(17, 25);
+            const currentDay = now.toLocaleString('en-US', { weekday: 'long' });
+            document.getElementById('currentTimeUTC').textContent = utcTime;
+            document.getElementById('currentDay').textContent = currentDay;
+        }
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+</html>
